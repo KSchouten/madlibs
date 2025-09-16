@@ -1,7 +1,9 @@
 library(shiny)
 library(bslib)
+library(useself)
 
 generate_story <- function(noun, verb, adjective, adverb) {
+  cat("generate_story\n")
   glue::glue(
     "
     Once upon a time, there was a {adjective} {noun} who loved to
@@ -26,9 +28,11 @@ ui <- page_sidebar(
 server <- function(input, output) {
 
   output$story <- renderText({
+    cat("start rendering output$story\n")
     req(input$noun1, input$verb, input$adjective, input$adverb)
+    cat("all fields are filled\n")
     generate_story(input$noun1, input$verb, input$adjective, input$adverb)
   })
 }
 
-shinyApp(ui = ui, server = server)
+print(shinyApp(ui = ui, server = server))
