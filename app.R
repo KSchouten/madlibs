@@ -1,6 +1,5 @@
 library(shiny)
 library(bslib)
-library(useself)
 
 generate_story <- function(noun, verb, adjective, adverb) {
   cat("generate_story\n")

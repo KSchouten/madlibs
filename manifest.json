@@ -784,41 +784,6 @@
         "Archs": "sourcetools.so.dSYM"
       }
     },
-    "useself": {
-      "Source": "github",
-      "Repository": null,
-      "description": {
-        "Package": "useself",
-        "Title": "Test quarto vignettes that use the current package",
-        "Version": "0.0.0.9000",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
-        "Description": "What the package does (one paragraph).",
-        "License": "MIT + file LICENSE",
-        "Encoding": "UTF-8",
-        "Roxygen": "list(markdown = TRUE)",
-        "RoxygenNote": "7.3.1",
-        "Suggests": "quarto",
-        "VignetteBuilder": "quarto",
-        "URL": "https://github.com/hadley/useself",
-        "BugReports": "https://github.com/hadley/useself/issues",
-        "RemoteType": "github",
-        "RemoteHost": "api.github.com",
-        "RemoteRepo": "useself",
-        "RemoteUsername": "hadley",
-        "RemotePkgRef": "hadley/useself",
-        "RemoteRef": "HEAD",
-        "RemoteSha": "e08c185e0243d1322ce7c2077bbf59c00301e342",
-        "GithubRepo": "useself",
-        "GithubUsername": "hadley",
-        "GithubRef": "HEAD",
-        "GithubSHA1": "e08c185e0243d1322ce7c2077bbf59c00301e342",
-        "NeedsCompilation": "no",
-        "Packaged": "2025-09-16 16:25:20 UTC; kschouten",
-        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph, fnd]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Built": "R 4.5.1; ; 2025-09-16 16:25:21 UTC; unix"
-      }
-    },
     "withr": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -877,7 +842,7 @@
   },
   "files": {
     "app.R": {
-      "checksum": "c1646181ed6c49ef8846166bc58a7d65"
+      "checksum": "5f9a8bdac199845257a5804d74051d4c"
     }
   },
   "users": null
