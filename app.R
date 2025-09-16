@@ -1,15 +1,7 @@
 library(shiny)
 library(bslib)
 
-generate_story <- function(noun, verb, adjective, adverb) {
-  cat("generate_story\n")
-  glue::glue(
-    "
-    Once upon a time, there was a {adjective} {noun} who loved to
-    {verb} {adverb}. It was the funniest thing ever!
-  "
-  )
-}
+
 
 ui <- page_sidebar(
   title = "Mad Libs Game",
@@ -24,12 +16,22 @@ ui <- page_sidebar(
   textOutput("story")
 )
 
-server <- function(input, output) {
+server <- function(input, output, session) {
+
+  generate_story <- function(noun, verb, adjective, adverb) {
+    cat(session$token, "generate_story\n")
+    glue::glue(
+      "
+      Once upon a time, there was a {adjective} {noun} who loved to
+      {verb} {adverb}. It was the funniest thing ever!
+    "
+    )
+  }
 
   output$story <- renderText({
-    cat("start rendering output$story\n")
+    cat(session$token, "start rendering output$story\n")
     req(input$noun1, input$verb, input$adjective, input$adverb)
-    cat("all fields are filled\n")
+    cat(session$token, "all fields are filled\n")
     generate_story(input$noun1, input$verb, input$adjective, input$adverb)
   })
 }
