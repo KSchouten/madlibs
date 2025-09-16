@@ -12,6 +12,7 @@ generate_story <- function(noun, verb, adjective, adverb) {
 
 ui <- page_sidebar(
   title = "Mad Libs Game",
+  theme = bs_theme(preset = "lux"),
   sidebar = bslib::sidebar(
     textInput("noun1", "Enter a noun:", ""),
     textInput("verb", "Enter a verb:", ""),
