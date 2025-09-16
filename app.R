@@ -1,4 +1,5 @@
 library(shiny)
+library(bslib)
 
 generate_story <- function(noun, verb, adjective, adverb) {
   glue::glue(
@@ -9,21 +10,28 @@ generate_story <- function(noun, verb, adjective, adverb) {
   )
 }
 
-ui <- fluidPage(
-  titlePanel("Mad Libs Game"),
-  sidebarLayout(
-    sidebarPanel(
-      textInput("noun1", "Enter a noun:", ""),
-      textInput("verb", "Enter a verb:", ""),
-      textInput("adjective", "Enter an adjective:", ""),
-      textInput("adverb", "Enter an adverb:", "")
-    ),
-    mainPanel(
-      h3("Your Mad Libs Story:"),
-      textOutput("story")
-    )
-  )
+ui <- page_sidebar(
+  title = "Mad Libs Game",
+  sidebar = bslib::sidebar(
+    textInput("noun1", "Enter a noun:", ""),
+    textInput("verb", "Enter a verb:", ""),
+    textInput("adjective", "Enter an adjective:", ""),
+    textInput("adverb", "Enter an adverb:", "")
+  ),
+  h3("Your Mad Libs Story:"),
+  textOutput("story")
 )
+# ui <- fluidPage(
+#   titlePanel("Mad Libs Game"),
+#   sidebarLayout(
+#     sidebarPanel(
+      
+#     ),
+#     mainPanel(
+      
+#     )
+#   )
+# )
 
 server <- function(input, output) {
 
