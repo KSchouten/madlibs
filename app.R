@@ -35,4 +35,4 @@ server <- function(input, output) {
   })
 }
 
-print(shinyApp(ui = ui, server = server))
+shinyApp(ui = ui, server = server)
