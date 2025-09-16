@@ -22,17 +22,6 @@ ui <- page_sidebar(
   h3("Your Mad Libs Story:"),
   textOutput("story")
 )
-# ui <- fluidPage(
-#   titlePanel("Mad Libs Game"),
-#   sidebarLayout(
-#     sidebarPanel(
-      
-#     ),
-#     mainPanel(
-      
-#     )
-#   )
-# )
 
 server <- function(input, output) {
 
